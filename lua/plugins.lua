@@ -1,7 +1,11 @@
 return {
   'NMAC427/guess-indent.nvim', -- Detect tabstop and shiftwidth automatically
   { '3rd/image.nvim', opts = {} }, -- Adds image support
-
+  {
+    'vhyrro/luarocks.nvim',
+    priority = 1000, -- Very high priority is required, luarocks.nvim should run as the first plugin in your config.
+    config = true,
+  },
   -- NOTE: Plugins can also be added by using a table,
   -- with the first argument being the link and the following
   -- keys can be used to configure plugin behavior/loading/etc.
