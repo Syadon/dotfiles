@@ -18,16 +18,6 @@ return {
     'saghen/blink.cmp',
   },
   config = function()
-    require('mason-lspconfig').setup {
-      ensure_installed = {
-        'lua_ls',
-        'basedpyright',
-        'ruff',
-        'clangd',
-        'html',
-        'markdownlint',
-      },
-    }
     -- Brief aside: **What is LSP?**
     --
     -- LSP is an initialism you've probably heard, but might not understand what it is.
@@ -206,9 +196,35 @@ return {
     --  - settings (table): Override the default settings passed when initializing the server.
     --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
     local servers = {
-      -- clangd = {},
+      clangd = {},
+
+      -- Python LSP: basedpyright for type checking and intellisense
+      basedpyright = {
+        settings = {
+          basedpyright = {
+            -- Disabilita l'organizzazione degli import (la gestisce ruff)
+            disableOrganizeImports = true,
+            analysis = {
+              typeCheckingMode = 'standard', -- Opzioni: 'off', 'basic', 'standard', 'strict'
+              autoSearchPaths = true,
+              useLibraryCodeForTypes = true,
+            },
+          },
+        },
+      },
+
+      -- Python Linter/Formatter: ruff per linting e formatting
+      ruff = {
+        init_options = {
+          settings = {
+            -- Configurazione per evitare conflitti con basedpyright
+            organizeImports = true,
+            fixAll = true,
+          },
+        },
+      },
+
       -- gopls = {},
-      -- pyright = {},
       -- rust_analyzer = {},
       -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
       --
