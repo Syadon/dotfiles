@@ -46,6 +46,7 @@ return { -- Useful plugin to show you pending keybinds.
     spec = {
       { '<leader>s', group = '[S]earch' },
       { '<leader>t', group = '[T]oggle' },
+      { '<leader>g', group = '[G]o to' },
       { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } },
     },
   },
