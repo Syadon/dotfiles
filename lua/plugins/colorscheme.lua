@@ -2,6 +2,9 @@ return {
   {
     'xiyaowong/transparent.nvim',
     lazy = false,
+    config = function()
+      vim.keymap.set('n', '<leader>tt', '<cmd>TransparentToggle<CR>', { desc = 'Toggle Transparency' })
+    end,
   },
   {
     'catppuccin/nvim',

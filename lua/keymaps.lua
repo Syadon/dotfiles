@@ -1,6 +1,8 @@
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
+vim.keymap.set('n', 'x', '"_x')
+
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
@@ -22,7 +24,14 @@ vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' }
 -- vim.keymap.set('n', '<up>', '<cmd>echo "Use k to move!!"<CR>')
 -- vim.keymap.set('n', '<down>', '<cmd>echo "Use j to move!!"<CR>')
 
+-- Resize:
+vim.keymap.set('n', '<up>', ':resize -2<CR>')
+vim.keymap.set('n', '<down>', ':resize +2<CR>')
+vim.keymap.set('n', '<left>', ':vertical resize -2<CR>')
+vim.keymap.set('n', '<right>', ':vertical resize +2<CR>')
+
 -- Keybinds to make split navigation easier.
+
 --  Use CTRL+<hjkl> to switch between windows
 --
 --  See `:help wincmd` for a list of all window commands
@@ -37,6 +46,8 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 -- vim.keymap.set("n", "<C-S-j>", "<C-w>J", { desc = "Move window to the lower" })
 -- vim.keymap.set("n", "<C-S-k>", "<C-w>K", { desc = "Move window to the upper" })
 
-vim.keymap.set('n', '<leader>twt', '<cmd>TransparentToggle<CR>', { desc = 'Toggle Transparency' })
+-- Indenting
+vim.keymap.set('v', '<', '<gv')
+vim.keymap.set('v', '>', '>gv')
 
 vim.keymap.set('n', '<leader>ai', '<cmd>CodeCompanionChat<CR>', { desc = 'Open Code Companion' })
