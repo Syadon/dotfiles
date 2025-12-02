@@ -34,8 +34,22 @@ return {
     require('mini.comment').setup()
     require('mini.pairs').setup()
     -- require('mini.files').setup()
-    -- require('mini.starter').setup()
+    require('mini.starter').setup()
     require('mini.notify').setup()
+
+    local miniclue = require 'mini.clue'
+    miniclue.setup {
+      triggers = {
+        { mode = 'n', keys = '<leader>' },
+        { mode = 'v', keys = '<leader>' },
+        { mode = 'n', keys = 'g' },
+        { mode = 'v', keys = 'g' },
+      },
+
+      window = {
+        delay = 100,
+      },
+    }
 
     -- ... and there is more!
     --  Check out: https://github.com/echasnovski/mini.nvim
