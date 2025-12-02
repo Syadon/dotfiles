@@ -44,6 +44,8 @@ return {
         { mode = 'v', keys = '<leader>' },
         { mode = 'n', keys = 'g' },
         { mode = 'v', keys = 'g' },
+        { mode = 'n', keys = '[' },
+        { mode = 'n', keys = ']' },
       },
 
       window = {
