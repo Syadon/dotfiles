@@ -50,4 +50,5 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 vim.keymap.set('v', '<', '<gv')
 vim.keymap.set('v', '>', '>gv')
 
-vim.keymap.set('n', '<leader>ai', '<cmd>CodeCompanionChat<CR>', { desc = 'Open Code Companion' })
+vim.keymap.set('n', '<leader>ccc', '<cmd>CodeCompanionChat<CR>', { desc = '[C]ode [C]ompanion [C]hat' })
+vim.keymap.set('n', '<leader>cca', '<cmd>CodeCompanionActions<CR>', { desc = '[C]ode [C]ompanion [A]ctions' })
