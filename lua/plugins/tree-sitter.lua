@@ -28,6 +28,7 @@ return { -- Highlight, edit, and navigate code
       'typescript',
       'sql',
       'gdscript',
+      'typst',
     },
     -- Autoinstall languages that are not installed
     auto_install = true,

@@ -33,6 +33,7 @@ return { -- Autoformat
       lua = { 'stylua' },
       c = { 'clang-format' },
       cpp = { 'clang-format' },
+      typ = { 'prettypst' },
       -- Conform can also run multiple formatters sequentially
       -- python = { "isort", "black" },
       --
