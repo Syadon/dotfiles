@@ -26,7 +26,12 @@ return {
     version = '1.*',
     opts = {}, -- lazy.nvim will implicitly calls `setup {}`
   },
-
+  { 'habamax/vim-godot', event = 'VimEnter' },
+  -- {
+  --   'Mathijs-Bakker/godotdev.nvim',
+  --   dependencies = { 'nvim-lspconfig', 'nvim-dap', 'nvim-dap-ui', 'nvim-treesitter' },
+  -- },
+  --
   -- NOTE: Plugins can also be added by using a table,
   -- with the first argument being the link and the following
   -- keys can be used to configure plugin behavior/loading/etc.
