@@ -49,6 +49,3 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 -- Indenting
 vim.keymap.set('v', '<', '<gv')
 vim.keymap.set('v', '>', '>gv')
-
-vim.keymap.set('n', '<leader>ccc', '<cmd>CodeCompanionChat<CR>', { desc = '[C]ode [C]ompanion [C]hat' })
-vim.keymap.set('n', '<leader>cca', '<cmd>CodeCompanionActions<CR>', { desc = '[C]ode [C]ompanion [A]ctions' })
